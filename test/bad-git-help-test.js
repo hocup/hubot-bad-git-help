@@ -45,7 +45,7 @@ describe('bad-git-help', function(){
         let specificPhrase = phrase.replace("<do something>", action);
 
         it('should react appropriately to messages of form "' + specificPhrase + '"', function() {
-            let actionKebab = "git-" + action.replace(/\s/g, "-");
+            let actionKebab = "git-" + action.replace(/\s/g, "-").replace(/s$/,"");
 
             let room = this.room;
             return this.room.user.say('alice', specificPhrase)
