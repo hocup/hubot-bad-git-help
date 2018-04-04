@@ -1,7 +1,7 @@
 {
   "name": "hubot-bad-git-help",
   "description": "A hubot script that does the things",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Gennady Malyshev <malysheg@gmail.com>",
   "license": "MIT",
   "keywords": [
