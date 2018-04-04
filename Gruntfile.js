@@ -6,11 +6,13 @@ module.exports = function (grunt) {
     mochaTest: {
       test: {
         options: {
-          reporter: 'spec',
-          require: 'coffee-script'
+          reporter: 'spec'
         },
-        src: ['test/**/*.coffee']
+        src: ['test/**/*.js']
       }
+    },
+    eslint: {
+       target: ['src/**/*.js', "test/**/*.js"]
     },
     release: {
       options: {
@@ -27,7 +29,7 @@ module.exports = function (grunt) {
   // load all grunt tasks
   require('matchdep').filterDev(['grunt-*', '!grunt-cli']).forEach(grunt.loadNpmTasks);
 
-  grunt.registerTask('test', ['mochaTest']);
+  grunt.registerTask('test', ['mochaTest', 'eslint']);
   grunt.registerTask('test:watch', ['watch']);
   grunt.registerTask('default', ['test']);
 };
