@@ -1,5 +1,7 @@
 # hubot-bad-git-help
 
+[![Build Status](https://travis-ci.org/hocup/hubot-bad-git-help.svg?branch=master)](https://travis-ci.org/hocup/hubot-bad-git-help)
+
 A hubot script that pretends to know a lot about git.
 Whenever a user asks about a git command, the script will provide documentation for the git command (rarely) or make something up.
 
