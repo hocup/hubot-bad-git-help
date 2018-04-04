@@ -22,10 +22,21 @@ module.exports = (robot) => {
         new RegExp("How\\s+(?:do|can)\\s+I\\s+use\\s+git(?:\\s|-)(.*[^\\?])", "i")
     ];
 
-    triggers.forEach(
-        (trigger) => {
-            robot.hear(trigger, matchedCallback);
-        }
+    // Use a custom listener, to ensure that a max of one response is generated for each incoming message
+    robot.listen(
+        (message) => {
+            let out = null;
+            for(let i = 0; i < triggers.length; i++) {
+                let trigger = triggers[i];
+                let execution = message && message.match(trigger)
+                if(execution && execution.length) {
+                    out = execution;
+                    break;
+                }
+            }
+
+            return out;
+        }, matchedCallback
     );
 }
 

@@ -2,7 +2,7 @@
   "name": "hubot-bad-git-help",
   "description": "A hubot script that does the things",
   "version": "0.0.0",
-  "author": "Gennady Malyshev <gmalyshev@akitabox.com>",
+  "author": "Gennady Malyshev <malysheg@gmail.com>",
   "license": "MIT",
   "keywords": [
     "hubot",
@@ -10,15 +10,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-bad-git-help.git"
+    "url": "git://github.com/hocup/hubot-bad-git-help.git"
   },
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-bad-git-help/issues"
+    "url": "https://github.com/hocup/hubot-bad-git-help/issues"
   },
   "dependencies": {
     "baba-grammar-git-man-page-generator": "^1.3.0",
-    "cheerio": "^1.0.0-rc.2",
-    "qs": "^6.5.1"
+    "cheerio": "^1.0.0-rc.2"
   },
   "peerDependencies": {
     "hubot": "2.x"
