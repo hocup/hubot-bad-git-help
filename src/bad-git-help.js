@@ -28,7 +28,7 @@ module.exports = (robot) => {
             let out = null;
             for(let i = 0; i < triggers.length; i++) {
                 let trigger = triggers[i];
-                let execution = message && message.match(trigger)
+                let execution = message && message.match && message.match(trigger)
                 if(execution && execution.length) {
                     out = execution;
                     break;
